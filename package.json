@@ -1,0 +1,17 @@
+{
+  "name": "library",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run -ws build",
+    "clean": "git clean -fdX && git reset --hard",
+    "format": "npx prettier . --write"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}

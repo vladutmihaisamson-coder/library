@@ -1,0 +1,30 @@
+{
+  "name": "@library/tokens",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/js/tokens.cjs",
+  "module": "dist/js/tokens.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/js/tokens.mjs",
+      "require": "./dist/js/tokens.cjs"
+    },
+    "./css": "./dist/css/variables.css",
+    "./scss": "./dist/scss/_tokens.scss",
+    "./json": "./dist/json/tokens.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "style-dictionary build",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "postbuild": "echo Token build completed"
+  },
+  "dependencies": {
+    "rimraf": "^6.0.1",
+    "style-dictionary": "^4.4.0"
+  }
+}
